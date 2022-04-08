@@ -1,5 +1,9 @@
 <template>
-  <button class="burger" v-bind:class="{active: isActive}"  v-on:click="onSideMenuClicked">
+  <button
+      class="burger"
+      v-bind:class="{active: isActiveSideMenu}"
+      v-on:click="onSideMenuClicked"
+  >
     <span></span>
   </button>
 </template>
@@ -7,17 +11,15 @@
 <script>
 export default {
   name: "BurgerComponent",
-  data(){
-    return {
-      isActive: false,
-    }
-  },
-  methods: {
-    onSideMenuClicked(e) {
-      console.log(e.target)
-      this.isActive = !this.isActive;
 
-      this.$emit("viewSideMenu",this.isActive)
+  props: {
+    isActiveSideMenu:Boolean,
+  },
+
+  methods: {
+    onSideMenuClicked() {
+      const toggle = !this.isActiveSideMenu;
+      this.$emit("viewSideMenu",toggle)
     }
   }
 }

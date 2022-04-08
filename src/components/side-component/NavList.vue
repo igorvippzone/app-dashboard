@@ -4,6 +4,8 @@
       <NavItem
         v-for="rout of routs" :key="rout.title"
         v-bind:rout="rout"
+        v-bind:isActiveSideMenu="isActiveSideMenu"
+        @closeSideMenu="closeSideMenu"
       />
     </ul>
   </nav>
@@ -16,6 +18,9 @@ export default {
   name: "NavList",
   components: {
     NavItem
+  },
+  props: {
+    isActiveSideMenu: Boolean
   },
   data() {
     return {
@@ -53,6 +58,12 @@ export default {
       ]
     }
   },
+  methods: {
+    closeSideMenu(close) {
+      this.$emit("closeSideMenu", close)
+      console.log('navList')
+    }
+  }
 }
 </script>
 

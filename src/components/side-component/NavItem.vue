@@ -1,6 +1,9 @@
 <template>
-  <li class="nav-item">
-    <router-link :to="{path: `${rout.path}`}" class="nav-item_link">
+  <li class="nav-item" v-on:click="closeSideMenu">
+    <router-link
+        :to="{path: `${rout.path}`}"
+        class="nav-item_link"
+    >
       <img class="icon-nav" :src="require(`../../assets/${rout.iconImage}.svg`)" alt="rout.iconImage">
 <!--      <img src="../../assets/i-home.svg">-->
       {{rout.title}}</router-link>
@@ -12,10 +15,17 @@
 export default {
   name: "NavItem",
   props: {
-    rout:{
-      type: Object,
-    }
+    rout: Object,
+    isActiveSideMenu: Boolean
   },
+
+  methods: {
+    closeSideMenu() {
+      const close = true;
+      this.$emit("closeSideMenu",close)
+      console.log('navItem')
+    }
+  }
 }
 </script>
 
@@ -60,7 +70,7 @@ export default {
 
   @media (max-width: 991px){
     .nav-item_link{
-      padding-top: 15px;
+      /*padding-top: 15px;*/
       font-size: 14px;
       color: #9e9e9e;
 

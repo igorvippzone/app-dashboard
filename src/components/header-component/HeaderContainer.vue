@@ -2,7 +2,10 @@
   <header class="header">
     <FormComponent />
     <UserComponent />
-    <BurgerComponent @viewSideMenu="viewSideMenu"/>
+    <BurgerComponent
+        v-bind:isActiveSideMenu="isActiveSideMenu"
+        @viewSideMenu="viewSideMenu"
+    />
   </header>
 </template>
 
@@ -18,9 +21,12 @@
       UserComponent,
       BurgerComponent
     },
+    props: {
+      isActiveSideMenu:Boolean,
+    },
     methods: {
-      viewSideMenu(isActive){
-        this.$emit("viewSideMenu", isActive)
+      viewSideMenu(toggle){
+        this.$emit("viewSideMenu", toggle)
       }
     }
   }

@@ -1,8 +1,8 @@
 <template>
   <div id="app">
-    <SideContainer v-bind:isActiveSideMenu="isActiveSideMenu" />
+    <SideContainer v-bind:isActiveSideMenu="isActiveSideMenu" @closeSideMenu="closeSideMenu"/>
     <div class="wrapper">
-      <HeaderContainer @viewSideMenu="viewSideMenu"/>
+      <HeaderContainer v-bind:isActiveSideMenu="isActiveSideMenu" @viewSideMenu="viewSideMenu"/>
       <main class="main"><router-view /></main>
     </div>
   </div>
@@ -24,8 +24,12 @@ export default {
     }
   },
   methods: {
-    viewSideMenu(isActive) {
-      this.isActiveSideMenu = isActive;
+    viewSideMenu(toggle) {
+      this.isActiveSideMenu = toggle;
+    },
+    closeSideMenu(close) {
+      this.isActiveSideMenu = !close;
+      console.log("App - ", this.isActiveSideMenu)
     },
 
   }
