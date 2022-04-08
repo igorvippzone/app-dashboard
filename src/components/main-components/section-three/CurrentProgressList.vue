@@ -17,7 +17,13 @@
         <div class="message">
           624
         </div>
-        <progress value="`${value}`" max="100">
+        <progress
+            v-bind:value="value"
+            max="100"
+            :style="{ '--bgColor': color}"
+
+
+        >
           200
         </progress>
       </div>
@@ -31,13 +37,18 @@ export default {
   name: "CurrentProgressList",
   data() {
     return{
-      value: 100
+      value: 100,
+
     }
   }
 }
 </script>
 
 <style scoped>
+:root {
+  --bgColor: none;
+  --bgColorA: none;
+}
   .current-list{
     list-style: none;
     margin: 0;
@@ -68,8 +79,6 @@ export default {
   }
 
   progress{
-    /*background-color: #ff0000;*/
-
     border-radius: 4px;
     max-width: 200px;
     width: 100%;
@@ -81,7 +90,7 @@ export default {
   }
 
   progress::-webkit-progress-value {
-    background-color: #7bff00;
+
     border-radius: 4px;
   }
 
