@@ -8,7 +8,6 @@
       <option>Fillip J.</option>
       <option>Anton P.</option>
     </select>
-<!--    <div class="user-select">user-select</div>-->
     <div class="user-icon">F</div>
   </div>
 </template>
@@ -104,6 +103,4 @@ export default {
   }
 
   @media (max-width: 575px){ }
-
-
 </style>

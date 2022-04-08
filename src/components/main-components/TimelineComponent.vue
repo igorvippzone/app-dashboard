@@ -17,23 +17,22 @@ export default {
 </script>
 
 <style scoped>
-.timeline-select{
-  font-size: 14px;
-  display: flex;
-  align-items: center;
-}
-.timeline-select p{
+  .timeline-select{
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+  }
+  .timeline-select p{
 
-  color: #78909c;
-}
-.timeline-select select{
-  max-width: 100px;
-  width: 100%;
-  color: #37474f;
-  border-radius: 20px;
-  background-color: #cfd8dc;
-  border: none;
-  padding: 10px 0 10px 15px;
-
-}
+    color: #78909c;
+  }
+  .timeline-select select{
+    max-width: 100px;
+    width: 100%;
+    color: #37474f;
+    border-radius: 20px;
+    background-color: #cfd8dc;
+    border: none;
+    padding: 10px 0 10px 15px;
+  }
 </style>

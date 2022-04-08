@@ -26,36 +26,36 @@ export default {
 </script>
 
 <style scoped>
-.title_wrapper{
-  padding-bottom: 30px;
-  margin-bottom: 40px;
-  border-bottom: 2px solid #dee3e7;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-wrap: wrap;
-}
+  .title_wrapper{
+    padding-bottom: 30px;
+    margin-bottom: 40px;
+    border-bottom: 2px solid #dee3e7;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+  }
 
-span{
-  display: block;
-  color: #78909c;
-}
-.graph-title{
-  font-size: 18px;
-  font-weight: 500;
-}
-.graph-subtitle{
-  color: #78909c;
-  font-size: 14px;
-}
+  span{
+    display: block;
+    color: #78909c;
+  }
+  .graph-title{
+    font-size: 18px;
+    font-weight: 500;
+  }
+  .graph-subtitle{
+    color: #78909c;
+    font-size: 14px;
+  }
 
-@media (max-width: 1199px){ }
+  @media (max-width: 1199px){ }
 
-@media (max-width: 991px){ }
+  @media (max-width: 991px){ }
 
-@media (max-width: 767px){
+  @media (max-width: 767px){
 
-}
+  }
 
-@media (max-width: 575px){ }
+  @media (max-width: 575px){ }
 </style>

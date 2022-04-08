@@ -14,16 +14,18 @@
   import UserComponent from "@/components/header-component/UserComponent";
   import BurgerComponent from "@/components/header-component/BurgerComponent";
   export default {
-
     name: "NavList",
+
     components: {
       FormComponent,
       UserComponent,
       BurgerComponent
     },
+
     props: {
       isActiveSideMenu:Boolean,
     },
+
     methods: {
       viewSideMenu(toggle){
         this.$emit("viewSideMenu", toggle)

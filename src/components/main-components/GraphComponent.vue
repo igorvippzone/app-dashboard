@@ -2,7 +2,7 @@
   <div class="graph">
     <TitleGraphComponent v-bind:elem="elem" />
     <div>
-          <SectionOneComponent />
+      <SectionOneComponent />
     </div>
   </div>
 
@@ -15,30 +15,29 @@ import SectionOneComponent from "@/components/main-components/section-one/Sectio
 
 export default {
   name: "GraphComponent",
+
   components: {
     TitleGraphComponent,
     SectionOneComponent
   },
+
   props: {
     elem: Object
   }
-
 }
 </script>
 
 <style scoped>
-.graph{
-  margin-bottom: 65px;
-}
+  .graph{
+    margin-bottom: 65px;
+  }
 
+  @media (max-width: 1199px){ }
 
-@media (max-width: 1199px){ }
+  @media (max-width: 991px){ }
 
-@media (max-width: 991px){ }
+  @media (max-width: 767px){
 
-@media (max-width: 767px){
-
-}
-
-@media (max-width: 575px){ }
+  }
+  @media (max-width: 575px){ }
 </style>
