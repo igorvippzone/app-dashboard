@@ -1,8 +1,10 @@
 <template>
 
     <div>
-<!--      <SectionThreeComponet />-->
       <SectionOneComponent />
+      <SectionTwoComponet />
+      <SectionThreeComponet />
+      <SectionFourComponet />
     </div>
 
 
@@ -10,12 +12,17 @@
 
 <script>
 import SectionOneComponent from "@/components/main-components/section-one/SectionOneComponent";
-// import SectionThreeComponet from "@/components/main-components/section-three/SectionThreeComponet";
+import SectionTwoComponet from "@/components/main-components/section-two/SectionTwoComponet";
+import SectionThreeComponet from "@/components/main-components/section-three/SectionThreeComponet";
+import SectionFourComponet from "@/components/main-components/section-four/SectionFourComponet";
 export default {
   name: "HomeView",
   components: {
-    // SectionThreeComponet,
-    SectionOneComponent
+
+    SectionOneComponent,
+    SectionTwoComponet,
+    SectionThreeComponet,
+    SectionFourComponet
   }
 }
 </script>

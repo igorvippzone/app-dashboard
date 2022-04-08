@@ -1,18 +1,26 @@
 <template>
-  <LineChartGenerator
-      :chart-options="chartOptions"
-      :chart-data="chartData"
-      :chart-id="chartId"
-      :dataset-id-key="datasetIdKey"
-      :plugins="plugins"
-      :css-classes="cssClasses"
-      :styles="styles"
-      :width="width"
-      :height="height"
-  />
+  <div class="section">
+    <TitleGraphComponent v-bind:option="titleData" />
+    <div class="wrapper-content">
+      <LineChartGenerator
+          :chart-options="chartOptions"
+          :chart-data="chartData"
+          :chart-id="chartId"
+          :dataset-id-key="datasetIdKey"
+          :plugins="plugins"
+          :css-classes="cssClasses"
+          :styles="styles"
+          :width="width"
+          :height="height"
+      />
+    </div>
+
+  </div>
+
 </template>
 
 <script>
+import TitleGraphComponent from "@/components/main-components/TitleGraphComponent";
 import { Line as LineChartGenerator } from 'vue-chartjs/legacy'
 
 import {
@@ -39,7 +47,8 @@ ChartJS.register(
 export default {
   name: 'LineChart',
   components: {
-    LineChartGenerator
+    LineChartGenerator,
+    TitleGraphComponent
   },
   props: {
     chartId: {
@@ -73,6 +82,11 @@ export default {
   },
   data() {
     return {
+      titleData: {
+        title:'Hi Filip,',
+        subTitle: 'Checkout your latest projects and their progress',
+        timeline: false
+      },
       chartData: {
         labels: [
           '30.05',
@@ -113,3 +127,12 @@ export default {
   }
 }
 </script>
+
+<style scoped>
+  .section{
+    margin-bottom: 60px;
+  }
+  .wrapper-content{
+    background-color: #fff;
+  }
+</style>

@@ -70,7 +70,21 @@ export default {
 <style scoped>
   .nav{
     width: 100%;
-
+  }
+  .nav-list{
+    overflow-x: auto;
+    height: calc(100vh - 70px);
+  }
+  .nav-list::-webkit-scrollbar {
+    width: 12px;
+  }
+  .nav-list::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  .nav-list::-webkit-scrollbar-thumb {
+    background-color: #df468e;
+    border-radius: 20px;
+    border: 3px solid #37474f;
   }
 
   @media (max-width: 1199px){ }

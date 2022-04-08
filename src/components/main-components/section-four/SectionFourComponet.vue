@@ -1,15 +1,28 @@
 <template>
   <div>
-    три
+    <TitleGraphComponent v-bind:option="titleData" />
+
   </div>
+
 </template>
 
 <script>
+import TitleGraphComponent from "@/components/main-components/TitleGraphComponent";
+
+
 export default {
-  name: "SectionFourComponet"
+  name: 'SectionFourComponent',
+  components: {
+    TitleGraphComponent
+  },
+  data() {
+    return {
+      titleData: {
+        title:'Crunch some Numbers',
+        subTitle: 'See how your projects are progressing via the new statistics engine.',
+        timeline: true
+      },
+    }
+  }
 }
 </script>
-
-<style scoped>
-
-</style>
