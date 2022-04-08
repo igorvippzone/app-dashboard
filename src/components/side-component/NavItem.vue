@@ -5,7 +5,6 @@
         class="nav-item_link"
     >
       <img class="icon-nav" :src="require(`../../assets/${rout.iconImage}.svg`)" alt="rout.iconImage">
-<!--      <img src="../../assets/i-home.svg">-->
       {{rout.title}}</router-link>
 
   </li>
@@ -62,6 +61,12 @@ export default {
   .icon-nav {
     margin-right: 15px;
     margin-left: 21px;
+    opacity: .5;
+  }
+
+  .nav-item_link.router-link-exact-active .icon-nav,
+  .nav-item_link:hover .icon-nav{
+    opacity: 1;
   }
 
 
